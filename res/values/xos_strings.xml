@@ -17,4 +17,8 @@
     <string name="flip_qs_tiles_title">Flip tiles</string>
     <string name="flip_qs_tiles_summary">Flips the tiles on touch</string>
 
+    <!-- XoplaX OS Version -->
+    <string name="xoplax_version">xoplax version</string>
+    <string name="xoplax_version_default">Unknown</string>
+
 </resources>

@@ -78,7 +78,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_DEVICE_MEMORY = "device_memory";
     private static final String KEY_CM_UPDATES = "cm_updates";
     private static final String KEY_STATUS = "status_info";
-
+    private static final String KEY_XOPLAX_VERSION = "xoplax_version";
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
     long[] mHits = new long[3];
     int mDevHitCountdown;
@@ -110,6 +110,8 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         setValueSummary(KEY_MOD_VERSION, "ro.cm.display.version");
         findPreference(KEY_MOD_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
+        setValueSummary(KEY_XOPLAX_VERSION, "ro.xoplax.version");
+        findPreference(KEY_XOPLAX_VERSION).setEnabled(true);
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
