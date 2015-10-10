@@ -108,6 +108,14 @@
         android:fragment="com.android.settings.ThemeSettings"
         android:icon="@drawable/prd_ic_themepacks" />
 
+    <!-- XoplaX OS settings -->
+    <header
+        settings:includeXmlForSearch="@xml/xoplax_settings"
+        android:id="@+id/xoplax_settings"
+        android:icon="@drawable/ic_settings_xoplax"
+        android:fragment="com.android.settings.xoplax.XoplaXSettings"
+        android:title="@string/xoplax_settings_title" />
+
     <!-- Status Bar -->
     <header
         settings:includeXmlForSearch="@xml/status_bar"
