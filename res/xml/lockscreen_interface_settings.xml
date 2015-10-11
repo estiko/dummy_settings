@@ -55,11 +55,6 @@
             android:key="lockscreen_modlock_enabled"
             android:title="@string/lockscreen_enable_modlock_title" />
 
-        <PreferenceScreen
-            android:key="keyguard_style"
-            android:fragment="com.android.settings.xoplax.LockscreenStyle"
-            android:title="@string/lockscreen_style_title"/>
-
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -88,6 +83,23 @@
             android:key="lockscreen_maximize_widgets"
             android:summary="@string/lockscreen_maximize_widgets_summary"
             android:title="@string/lockscreen_maximize_widgets_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/misc_category"
+        android:key="lockscreen_misc_category" >
+
+        <!-- See Through -->
+        <CheckBoxPreference
+            android:key="lockscreen_see_through"
+            android:title="@string/see_through_title"
+            android:summary="@string/see_through_summary" />
+
+        <PreferenceScreen
+            android:key="keyguard_style"
+            android:fragment="com.android.settings.xoplax.LockscreenStyle"
+            android:title="@string/lockscreen_style_title"/>
 
     </PreferenceCategory>
 

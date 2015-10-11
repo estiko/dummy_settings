@@ -13,6 +13,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Categories -->
+    <string name="misc_category">Misc</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
@@ -22,6 +25,10 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
     <string name="color_default">Default</string>
+
+    <!--Lockscreen See Through-->
+    <string name="see_through_title">See through</string>
+    <string name="see_through_summary">Shows the content behind your lockscreen, your data may be visible to those around you</string>
 
     <!-- Lockscreen style settings -->
     <string name="lockscreen_style_reset_message">Reset all lockscreen colors?</string>
