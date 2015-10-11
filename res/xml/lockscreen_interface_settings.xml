@@ -55,6 +55,11 @@
             android:key="lockscreen_modlock_enabled"
             android:title="@string/lockscreen_enable_modlock_title" />
 
+        <PreferenceScreen
+            android:key="keyguard_style"
+            android:fragment="com.android.settings.xoplax.LockscreenStyle"
+            android:title="@string/lockscreen_style_title"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
