@@ -77,7 +77,6 @@ public class LockscreenStyle extends SettingsPreferenceFragment
     private static final String KEY_LOCKSCREEN_MISC_COLOR =
             "lockscreen_misc_color";
 
-
     private String mDefault;
 
     private CheckBoxPreference mColorizeCustom;
@@ -183,7 +182,9 @@ public class LockscreenStyle extends SettingsPreferenceFragment
         // No lock-slider is available
         boolean dotsDisabled = new LockPatternUtils(getActivity()).isSecure()
             && Settings.Secure.getInt(getContentResolver(),
-            Settings.Secure.LOCK_BEFORE_UNLOCK, 0) == 0;
+            Settings.Secure.LOCK_BEFORE_UNLOCK, 0) == 0
+            && Settings.Secure.getInt(getContentResolver(),
+                    Settings.Secure.LOCK_SHAKE_TEMP_SECURE, 0) == 0;
         boolean imageExists = Settings.Secure.getString(getContentResolver(),
                 Settings.Secure.LOCKSCREEN_LOCK_ICON) != null;
         mDotsColor.setEnabled(!dotsDisabled);
@@ -340,12 +341,12 @@ public class LockscreenStyle extends SettingsPreferenceFragment
 
         intent.setType("image/*");
         intent.putExtra("crop", "true");
-        intent.putExtra("aspectX", 1);
-        intent.putExtra("aspectY", 1);
+        intent.putExtra("aspectX", px);
+        intent.putExtra("aspectY", px);
         intent.putExtra("outputX", px);
         intent.putExtra("outputY", px);
         intent.putExtra("scale", true);
-        intent.putExtra("scaleUpIfNeeded", true);
+        intent.putExtra("scaleUpIfNeeded", false);
         intent.putExtra("outputFormat", Bitmap.CompressFormat.PNG.toString());
 
         try {
@@ -410,7 +411,7 @@ public class LockscreenStyle extends SettingsPreferenceFragment
 
     private int requestImageSize() {
         return (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, 200, getResources().getDisplayMetrics());
+                TypedValue.COMPLEX_UNIT_DIP, 68, getResources().getDisplayMetrics());
     }
 
     private void showDialogInner(int id) {
