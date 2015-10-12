@@ -2179,5 +2179,11 @@
         </service>
 
         <service android:name=".search.SearchPopulator"/>
+
+        <activity
+            android:name=".xoplax.lsn.LockscreenNotifications"
+            android:label="@string/Lockscreen_notifications_header" >
+        </activity>
+
     </application>
 </manifest>
