@@ -25,11 +25,4 @@
         android:title="@string/progressbar_title"
         android:icon="@drawable/ic_settings_progressbar" />
 
-    <!-- HALO -->
-    <PreferenceScreen
-        android:id="@+id/halo_settings"
-        android:fragment="com.android.settings.xoplax.Halo"
-        android:icon="@drawable/ic_settings_halo" 
-        android:title="@string/halo_settings_title" />
-
 </PreferenceScreen>
