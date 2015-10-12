@@ -96,6 +96,12 @@
             android:summary="@string/lockscreen_notifications_summary"
             android:title="@string/Lockscreen_notifications_header" />
 
+        <!-- Battery around unlock ring -->
+        <CheckBoxPreference
+            android:key="battery_around_lockscreen_ring"
+            android:title="@string/battery_around_lockscreen_ring"
+            android:defaultValue="false" />
+
         <!-- See Through -->
         <CheckBoxPreference
             android:key="lockscreen_see_through"
