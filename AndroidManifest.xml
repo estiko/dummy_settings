@@ -2185,5 +2185,8 @@
             android:label="@string/Lockscreen_notifications_header" >
         </activity>
 
+        <!-- Kernel Adiutor -->
+        <activity android:name="com.grarak.kerneladiutor.MainActivity"/>
+
     </application>
 </manifest>
