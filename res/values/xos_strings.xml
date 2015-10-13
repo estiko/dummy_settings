@@ -44,11 +44,9 @@
     <string name="blur_radius_summary">Set the blur radius for the blur effect</string>
 
     <!-- Lockscreen Notifications -->
-    <!-- Categories -->
     <string name="general">General</string>
     <string name="layout">Layout</string>
     <string name="privacy">Privacy</string>
-
     <string name="Lockscreen_notifications_header">Lockscreen Notifications</string>
     <string name="lockscreen_notifications">Lockscreen notifications</string>
     <string name="lockscreen_notifications_summary">Show pending notifications on lockscreen</string>
@@ -73,8 +71,6 @@
     <string name="offset_top">Offset to the top of the screen:</string>
     <string name="privacy_mode">Privacy Mode</string>
     <string name="privacy_mode_summary">Disables notifications from beeing shown and dismissed. This way, you just see the icons of your notifications.</string>
-    <string name="dynamic_width">Dynamic width</string>
-    <string name="dynamic_width_summary">Sets the width of notifications dynamic, so that they only use the space they really need</string>
     <string name="excluded_apps_title">Excluded applications</string>
     <string name="excluded_apps_summary">Excluded applications will not show up as lockscreen notifications</string>
     <string name="notification_color">Notification background color</string>
