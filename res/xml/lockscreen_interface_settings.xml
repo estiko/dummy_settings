@@ -120,11 +120,6 @@
             android:max="25"
             android:defaultValue="12" />
 
-        <PreferenceScreen
-            android:key="keyguard_style"
-            android:fragment="com.android.settings.xoplax.LockscreenStyle"
-            android:title="@string/lockscreen_style_title"/>
-
     </PreferenceCategory>
 
 </PreferenceScreen>

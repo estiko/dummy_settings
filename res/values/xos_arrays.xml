@@ -33,19 +33,6 @@
         <item>3</item>
     </string-array>
 
-    <!-- Lockscreen lock icon values -->
-    <string-array name="lock_icon_entries">
-        <item>@string/lockscreen_lock_icon_custom</item>
-        <item>@string/lockscreen_lock_icon_xoplax</item>
-        <item>@string/lockscreen_lock_icon_default</item>
-    </string-array>
-
-    <string-array name="lock_icon_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
     <!-- Low battery warning policy -->
     <string-array name="pref_low_battery_warning_policy_entries">
         <item>@string/low_battery_warning_policy_popup_sound</item>
