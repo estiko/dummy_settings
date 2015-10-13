@@ -53,6 +53,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private static final String KEY_ENABLE_MAXIMIZE_WIGETS = "lockscreen_maximize_widgets";
     private static final String KEY_LOCKSCREEN_MODLOCK_ENABLED = "lockscreen_modlock_enabled";
     private static final String KEY_LOCKSCREEN_TARGETS = "lockscreen_targets";
+    private static final String LOCK_BEFORE_UNLOCK = "lock_before_unlock";
     private static final String KEY_LOCKSCREEN_SEE_THROUGH = "lockscreen_see_through";
     private static final String KEY_LOCKSCREEN_BLUR_BEHIND = "lockscreen_blur_behind";
     private static final String KEY_LOCKSCREEN_BLUR_RADIUS = "lockscreen_blur_radius";
@@ -63,6 +64,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private CheckBoxPreference mEnableMaximizeWidgets;
     private ListPreference mBatteryStatus;
     private Preference mLockscreenTargets;
+    private CheckBoxPreference mLockBeforeUnlock;
 
     private CheckBoxPreference mSeeThrough;
     private SeekBarPreference mBlurRadius;
@@ -129,6 +131,13 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             lockscreenButtonsPreference.setEnabled(false);
             lockscreenButtonsPreference.setSummary(R.string.lockscreen_buttons_disabled_summary);
         }
+
+        // Enable or disable lockscreen widgets based on policy
+        checkDisabledByPolicy(mEnableKeyguardWidgets,
+                DevicePolicyManager.KEYGUARD_DISABLE_WIDGETS_ALL);
+
+        // Lock before Unlock
+        mLockBeforeUnlock = (CheckBoxPreference) findPreference(LOCK_BEFORE_UNLOCK);
 
         // Enable or disable camera widget based on device and policy
         if (Camera.getNumberOfCameras() == 0) {
@@ -234,6 +243,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         } else if (KEY_ENABLE_CAMERA.equals(key)) {
             mLockUtils.setCameraEnabled(mEnableCameraWidget.isChecked());
             return true;
+        } else if (preference == mLockBeforeUnlock) {
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.LOCK_BEFORE_UNLOCK,
+                    mLockBeforeUnlock.isChecked() ? 1 : 0);
         } else if (preference == mSeeThrough) {
             Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_SEE_THROUGH,
                     mSeeThrough.isChecked() ? 1 : 0);
