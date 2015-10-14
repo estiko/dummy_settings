@@ -1,4 +1,4 @@
-package com.carbon.fibers.chameleonos;
+package com.android.settings.xoplax;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
-import com.carbon.fibers.R;
+import com.android.settings.R;
 
 public class SeekBarPreference extends Preference implements OnSeekBarChangeListener {
 
