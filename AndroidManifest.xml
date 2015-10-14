@@ -2183,5 +2183,16 @@
         <!-- Kernel Adiutor -->
         <activity android:name="com.grarak.kerneladiutor.MainActivity"/>
 
+        <!-- RAM bar -->
+        <activity android:name="Settings$ASSRamBarActivity"
+                android:label="@string/ram_bar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.xoplax.RamBar" />
+        </activity>
+
     </application>
 </manifest>
