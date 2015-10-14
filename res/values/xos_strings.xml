@@ -30,6 +30,8 @@
     <string name="default_string">Default</string>
     <string name="recents_panel_settings_title" >Recents panel settings</string>
     <string name="reset">Reset</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
 
     <!-- Kernel Adiutor -->
     <string name="kernel_adiutor_title">Kernel Adiutor</string>
@@ -123,6 +125,14 @@
     <string name="notif_wallpaper_alpha_title">Background transparency</string>
     <string name="notif_alpha_title">Notification transparency</string>
     <string name="shortcut_image_not_valid">The chosen app did not return a valid icon or does not support image cropping. Use another app</string>
+
+    <!-- Notification Reminders -->
+    <string name="noti_reminder_title">Notification reminder</string>
+    <string name="noti_reminder_enable_title">Enable notification reminder</string>
+    <string name="noti_reminder_sound_title">Notify sound</string>
+    <string name="noti_reminder_sound_looping">Until dismissed</string>
+    <string name="noti_reminder_ringtone">Notify ringtone</string>
+    <string name="noti_reminder_summary">Enter with a notification and set a reminder for the same</string>
 
     <!-- QuickSettings fliptiles -->
     <string name="flip_qs_tiles_title">Flip tiles</string>
