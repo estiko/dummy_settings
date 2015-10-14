@@ -18,12 +18,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/xoplax_settings_title">
 
-    <!-- Battery Saver -->
-    <PreferenceScreen
-        android:key="@+id/pref_battery_saver"
-        android:fragment="com.android.settings.xoplax.batterysaver.BatterySaverSettings"
-        android:title="@string/battery_saver_title" />
-
     <!-- Custom ProgressBar -->
     <PreferenceScreen
         android:id="@+id/progressbar_settings"

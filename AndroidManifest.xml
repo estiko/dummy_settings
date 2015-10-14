@@ -2183,34 +2183,5 @@
         <!-- Kernel Adiutor -->
         <activity android:name="com.grarak.kerneladiutor.MainActivity"/>
 
-        <!-- BatterySaverMode Methods -->
-        <receiver
-            android:name=".xoplax.batterysaver.BootReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-            </intent-filter>
-        </receiver>
-
-        <receiver
-            android:name=".xoplax.batterysaver.BatterySaverReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.TIMEZONE_CHANGED"></action>
-                <action android:name="android.intent.action.TIME_CHANGED"></action>
-                <action android:name="android.intent.action.DATE_CHANGED"></action>
-                <action android:name="android.intent.action.BATTERY_SERVICES"></action>
-                <action android:name="com.android.settings.xoplax.batterysaver.SCHEDULE_BATTERY_SAVER"/>
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name=".xoplax.batterysaver.BatterySaverSettings"
-            android:label="@string/battery_saver_title" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="com.android.settings.SHORTCUT" />
-            </intent-filter>
-        </activity>
-        <!-- End of BatterySaverMode Methods -->
-
     </application>
 </manifest>
