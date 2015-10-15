@@ -25,6 +25,13 @@
         android:title="@string/progressbar_title"
         android:icon="@drawable/ic_settings_progressbar" />
 
+    <!-- Screen Record -->
+    <PreferenceScreen
+        android:id="@+id/screen_recorder"
+        android:title="@string/screen_recorder_title"
+        android:fragment="com.android.settings.xoplax.ScreenRecorderSettings"
+        android:icon="@drawable/ic_screen_record" />
+
     <!-- Wakelock Blocker -->
     <PreferenceScreen
         android:id="@+id/wakelock_blocker"
