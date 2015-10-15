@@ -26,6 +26,9 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <!-- CPUFreq Tile -->
+    <string name="title_tile_cpufreq">CPUFreq</string>
+
     <!-- General strings -->
     <string name="default_string">Default</string>
     <string name="recents_panel_settings_title" >Recents panel settings</string>
