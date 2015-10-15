@@ -196,6 +196,10 @@
     <string name="sample_progressbar_text">ProgressBar : preview</string>
     <string name="progressbar_reset_message">Reset progress bar style to default?</string>
 
+    <!-- Volume pane timeout -->
+    <string name="volume_panel_timeout_title">Volume panel Timeout</string>
+    <string name="volume_panel_timeout_summary">Time until the volume panel to hide</string>
+
     <!-- XoplaX OS Settings -->
     <string name="xoplax_settings_title">XoplaX Inside</string>
 
