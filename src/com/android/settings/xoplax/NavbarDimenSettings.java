@@ -144,4 +144,3 @@ public class NavbarDimenSettings extends SettingsPreferenceFragment implements
     }
 
 }
-

@@ -363,7 +363,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_BLUETOOTH_INPUT_SETTINGS);
 
-        boolean hasNavBarByDefault = getResources().getBoolean(
+	// Booleans to enable/disable nav bar
+ 	// overriding overlays
+	boolean hasNavBarByDefault = getResources().getBoolean(
                 com.android.internal.R.bool.config_showNavigationBar);
         boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
                 Settings.System.NAVIGATION_BAR_SHOW, hasNavBarByDefault ? 1 : 0) == 1;
@@ -371,8 +373,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         mEnableNavigationBar.setChecked(enableNavigationBar);
         mEnableNavigationBar.setOnPreferenceChangeListener(this);
 
-    updateSettings();
+	updateNavbarPreferences(enableNavigationBar);
     }
+
+    // Enable/disbale nav bar
+    private void updateNavbarPreferences(boolean show) {}
 
     @Override
     public void onResume() {
@@ -399,14 +404,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         }
     }
 
-    private void updateSettings() {
-        boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
-                Settings.System.NAVIGATION_BAR_SHOW,
-                SlimActions.isNavBarDefault(getActivity()) ? 1 : 0) == 1;
-        mEnableNavigationBar.setChecked(enableNavigationBar);
-
-        updateNavbarPreferences(enableNavigationBar);
-    }
 
     private ListPreference initActionList(String key, int value) {
         ListPreference list = (ListPreference) getPreferenceScreen().findPreference(key);
@@ -525,22 +522,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                     Settings.System.VOLUME_KEY_CURSOR_CONTROL);
             return true;
         // Enable/disable navbar
-        } else if (preference == mEnableNavigationBar) {
-            mEnableNavigationBar.setEnabled(true);
-            if (!((Boolean) newValue) && !SlimActions.isPieEnabled(getActivity())
-                    && SlimActions.isNavBarDefault(getActivity())) {
-                showDialogInner(DLG_NAVIGATION_WARNING);
-                return true;
-            }
+	} else if (preference == mEnableNavigationBar) {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NAVIGATION_BAR_SHOW,
-                    ((Boolean) newValue) ? 1 : 0);
-            mHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    mEnableNavigationBar.setEnabled(true);
-                }
-            }, 1000);
+                    ((Boolean) objValue) ? 1 : 0);
+            updateNavbarPreferences((Boolean) objValue);
             return true;
         } else if (preference == mNavigationRecentsLongPressAction) {
             // RecentsLongPressAction is handled differently because it intentionally uses Settings.Secure over
