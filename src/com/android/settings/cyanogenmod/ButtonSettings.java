@@ -365,7 +365,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
 	// Booleans to enable/disable nav bar
  	// overriding overlays
-	boolean hasNavBarByDefault = getResources().getBoolean(
+        boolean hasNavBarByDefault = getResources().getBoolean(
                 com.android.internal.R.bool.config_showNavigationBar);
         boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
                 Settings.System.NAVIGATION_BAR_SHOW, hasNavBarByDefault ? 1 : 0) == 1;
@@ -525,8 +525,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 	} else if (preference == mEnableNavigationBar) {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NAVIGATION_BAR_SHOW,
-                    ((Boolean) objValue) ? 1 : 0);
-            updateNavbarPreferences((Boolean) objValue);
+                    ((Boolean) newValue) ? 1 : 0);
+            updateNavbarPreferences((Boolean) newValue);
             return true;
         } else if (preference == mNavigationRecentsLongPressAction) {
             // RecentsLongPressAction is handled differently because it intentionally uses Settings.Secure over

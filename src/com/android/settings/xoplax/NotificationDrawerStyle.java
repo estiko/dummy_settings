@@ -101,7 +101,7 @@ public class NotificationDrawerStyle extends SettingsPreferenceFragment implemen
 
         float transparency;
         try{
-            wallpaperTransparency = Settings.System.getFloat(getContentResolver(),
+            transparency = Settings.System.getFloat(getContentResolver(),
                     Settings.System.NOTIFICATION_BACKGROUND_ALPHA);
         } catch (Exception e) {
             transparency = 0;
@@ -372,4 +372,3 @@ public class NotificationDrawerStyle extends SettingsPreferenceFragment implemen
     }
 
 }
-
