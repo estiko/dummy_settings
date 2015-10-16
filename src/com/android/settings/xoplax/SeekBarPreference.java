@@ -28,7 +28,6 @@ public class SeekBarPreference extends Preference
     int mSetDefault = -1;
     int mMultiply = -1;
     int mMinimum = -1;
-    boolean mDisableText = false;
     boolean mDisablePercentageValue = false;
     boolean mIsMilliSeconds = false;
 
@@ -87,7 +86,7 @@ public class SeekBarPreference extends Preference
 
         if (progress == mSetDefault) {
             monitorBox.setText(R.string.default_string);
-        } else if (!mDisableText) {
+        } else {
             if (mIsMilliSeconds) {
                 monitorBox.setText(progress + " ms");
             } else if (!mDisablePercentageValue) {
@@ -101,10 +100,6 @@ public class SeekBarPreference extends Preference
 
     public void disablePercentageValue(boolean disable) {
         mDisablePercentageValue = disable;
-    }
-
-    public void disableText(boolean disable) {
-        mDisableText = disable;
     }
 
     public void setInterval(int inter) {
