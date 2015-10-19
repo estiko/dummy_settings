@@ -52,6 +52,19 @@
         <item>5</item>
     </string-array>
 
+    <!-- MediaScanner behavior on boot -->
+    <string-array name="media_scanner_on_boot_entries">
+        <item>@string/media_scanner_on_boot_enabled</item>
+        <item>@string/media_scanner_on_boot_ask</item>
+        <item>@string/media_scanner_on_boot_disabled</item>
+    </string-array>
+
+    <string-array name="media_scanner_on_boot_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <!-- Navigation bar custom dimensions -->
     <string-array name="navigation_bar_width_entries" translatable="false">
         <item>@string/navigation_bar_size_42_dp_default</item>

@@ -13,6 +13,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Advanced settings -->
+    <string name="advanced_options_settings_title">Advanced</string>
+
     <!-- Categories -->
     <string name="misc_category">Misc</string>
 
@@ -94,6 +97,12 @@
     <string name="low_battery_warning_policy_sound">Sound only</string>
     <string name="battery_prefs_title">Options</string>
     <string name="battery_stats_title">Statistics</string>
+
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot_title">MediaScanner behavior on boot</string>
+    <string name="media_scanner_on_boot_enabled">Scan media</string>
+    <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
+    <string name="media_scanner_on_boot_disabled">Do not scan media</string>
 
     <!-- Navigation bar -->
     <string name="navbar_enable_bar">Enable navigation bar</string>
