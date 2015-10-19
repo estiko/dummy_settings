@@ -72,9 +72,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_POWER_END_CALL = "power_end_call";
     private static final String KEY_HOME_ANSWER_CALL = "home_answer_call";
 
-    // Enable/disable nav bar	
-    private static final String ENABLE_NAVIGATION_BAR = "enable_nav_bar";
-
     private static final String CATEGORY_POWER = "power_key";
     private static final String CATEGORY_HOME = "home_key";
     private static final String CATEGORY_MENU = "menu_key";
@@ -125,7 +122,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mHomeAnswerCall;
     private CheckBoxPreference mNavigationBarLeftPref;
     private ListPreference mNavigationRecentsLongPressAction;
-    private CheckBoxPreference mEnableNavigationBar;
 
     private PreferenceCategory mNavigationPreferencesCat;
 
@@ -362,22 +358,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_BLUETOOTH_INPUT_SETTINGS);
-
-	// Booleans to enable/disable nav bar
- 	// overriding overlays
-        boolean hasNavBarByDefault = getResources().getBoolean(
-                com.android.internal.R.bool.config_showNavigationBar);
-        boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
-                Settings.System.NAVIGATION_BAR_SHOW, hasNavBarByDefault ? 1 : 0) == 1;
-        mEnableNavigationBar = (CheckBoxPreference) findPreference(ENABLE_NAVIGATION_BAR);
-        mEnableNavigationBar.setChecked(enableNavigationBar);
-        mEnableNavigationBar.setOnPreferenceChangeListener(this);
-
-	updateNavbarPreferences(enableNavigationBar);
     }
-
-    // Enable/disbale nav bar
-    private void updateNavbarPreferences(boolean show) {}
 
     @Override
     public void onResume() {
@@ -403,7 +384,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             mHomeAnswerCall.setChecked(homeButtonAnswersCall);
         }
     }
-
 
     private ListPreference initActionList(String key, int value) {
         ListPreference list = (ListPreference) getPreferenceScreen().findPreference(key);
@@ -520,13 +500,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else if (preference == mVolumeKeyCursorControl) {
             handleActionListChange(mVolumeKeyCursorControl, newValue,
                     Settings.System.VOLUME_KEY_CURSOR_CONTROL);
-            return true;
-        // Enable/disable navbar
-	} else if (preference == mEnableNavigationBar) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.NAVIGATION_BAR_SHOW,
-                    ((Boolean) newValue) ? 1 : 0);
-            updateNavbarPreferences((Boolean) newValue);
             return true;
         } else if (preference == mNavigationRecentsLongPressAction) {
             // RecentsLongPressAction is handled differently because it intentionally uses Settings.Secure over
