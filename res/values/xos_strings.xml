@@ -127,6 +127,10 @@
     <string name="notif_alpha_title">Notification transparency</string>
     <string name="shortcut_image_not_valid">The chosen app did not return a valid icon or does not support image cropping. Use another app</string>
 
+    <!-- Notification Header -->
+    <string name="custom_statusbar_header_title">Contextual notification panel header</string>
+    <string name="custom_statusbar_header_summary">Sets the background of the notification panel header to an image based on the current date and time</string>
+
     <!-- Power menu screen recorder -->
     <string name="power_menu_screenrecord_title">Screen record</string>
 
