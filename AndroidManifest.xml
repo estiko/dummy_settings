@@ -2184,6 +2184,9 @@
         <activity android:name="com.grarak.kerneladiutor.MainActivity"/>
 
         <!-- RAM bar -->
+        <activity android:name=".xoplax.RamBar" />
+
+        <!-- Pseudo-activity used to provide an intent-filter entry point to ass display rotation config -->
         <activity android:name="Settings$ASSRamBarActivity"
                 android:label="@string/ram_bar">
             <intent-filter>

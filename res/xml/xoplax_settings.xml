@@ -25,6 +25,13 @@
         android:title="@string/progressbar_title"
         android:icon="@drawable/ic_settings_progressbar" />
 
+    <!-- Recent Panel Settings -->
+    <PreferenceScreen
+        android:key="@+id/recents_panel"
+        android:fragment="com.android.settings.xoplax.RecentsPanelSettings"
+        android:title="@string/recents_panel_settings_title"
+        android:icon="@drawable/ic_settings_recents" />
+
     <!-- Screen Record -->
     <PreferenceScreen
         android:id="@+id/screen_recorder"
