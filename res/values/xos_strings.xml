@@ -264,6 +264,16 @@
     <string name="volume_panel_timeout_title">Volume panel Timeout</string>
     <string name="volume_panel_timeout_summary">Time until the volume panel to hide</string>
 
+    <!-- Volume steps -->
+    <string name="volume_steps_title">Volume steps</string>
+    <string name="volume_steps_summary">Fine grained control of volume for specified sound streams</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker">Wakelock Blocker</string>
     <string name="wakelock_blocker_title">Enable</string>
