@@ -255,6 +255,13 @@
     <string name="screen_recorder_bitrate_50000000">50000000</string>
     <string name="screen_recorder_bitrate_100000000">100000000</string>
 
+    <!-- Slim Recents -->
+    <string name="slim_recents_category">Slim Recents</string>
+    <string name="slim_recents_warning_title">Warning</string>
+    <string name="slim_recents_warning_message">SystemUI will restart to apply changes</string>
+    <string name="recents_use_slim_title">Use for recents</string>
+    <string name="recents_use_slim_summary">Use Slim Recents instead of default recents view</string>
+
     <!-- Smooth ProgressBar -->
     <string name="progressbar_title">Custom progressBar</string>
     <string name="progressbar_mirror_title">Mirror mode</string>
