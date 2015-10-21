@@ -52,6 +52,21 @@
         <item>3</item>
     </string-array>
 
+    <!-- long press back to kill configurable timeout -->
+    <string-array name="kill_app_longpress_timeout_entries">
+        <item>@string/timeout_2000</item>
+        <item>@string/timeout_1500</item>
+        <item>@string/timeout_1000</item>
+        <item>@string/timeout_500</item>
+    </string-array>
+
+    <string-array name="kill_app_longpress_timeout_values" translatable="false">
+        <item>2000</item>
+        <item>1500</item>
+        <item>1000</item>
+        <item>500</item>
+    </string-array>
+
     <!-- Low battery warning policy -->
     <string-array name="pref_low_battery_warning_policy_entries">
         <item>@string/low_battery_warning_policy_popup_sound</item>
