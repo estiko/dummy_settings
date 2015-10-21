@@ -50,6 +50,11 @@
         android:entryValues="@array/smart_pulldown_values"
         android:persistent="false" />
 
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+        android:key="notification_brightness_slider"
+        android:title="@string/notification_drawer_brightness_slider_title"
+        android:defaultValue="false" />
+
     <CheckBoxPreference
         android:key="custom_status_bar_header"
         android:title="@string/custom_statusbar_header_title"

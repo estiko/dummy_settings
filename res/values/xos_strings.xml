@@ -16,6 +16,9 @@
     <!-- Advanced settings -->
     <string name="advanced_options_settings_title">Advanced</string>
 
+    <!-- Brightness Slider -->
+    <string name="notification_drawer_brightness_slider_title">Brightness Slider</string>
+
     <!-- Categories -->
     <string name="misc_category">Misc</string>
 
