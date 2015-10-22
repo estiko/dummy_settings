@@ -120,6 +120,11 @@
             android:max="25"
             android:defaultValue="12" />
 
+        <CheckBoxPreference
+            android:key="lockscreen_disable_frame"
+            android:title="@string/lockscreen_widget_frame_title"
+            android:summary="@string/lockscreen_widget_frame_summary" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

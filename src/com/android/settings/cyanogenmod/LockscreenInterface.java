@@ -57,6 +57,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private static final String KEY_LOCKSCREEN_SEE_THROUGH = "lockscreen_see_through";
     private static final String KEY_LOCKSCREEN_BLUR_BEHIND = "lockscreen_blur_behind";
     private static final String KEY_LOCKSCREEN_BLUR_RADIUS = "lockscreen_blur_radius";
+    private static final String KEY_DISABLE_FRAME = "lockscreen_disable_frame";
 
     private CheckBoxPreference mEnableKeyguardWidgets;
     private CheckBoxPreference mEnableCameraWidget;
@@ -65,6 +66,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private ListPreference mBatteryStatus;
     private Preference mLockscreenTargets;
     private CheckBoxPreference mLockBeforeUnlock;
+    private CheckBoxPreference mDisableFrame;
 
     private CheckBoxPreference mSeeThrough;
     private SeekBarPreference mBlurRadius;
@@ -106,6 +108,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         if (mEnableModLock != null) {
             mEnableModLock.setOnPreferenceChangeListener(this);
         }
+
+        // Keyguard widget frame
+        mDisableFrame = (CheckBoxPreference) findPreference(KEY_DISABLE_FRAME);
 
         mBatteryStatus = (ListPreference) findPreference(KEY_BATTERY_STATUS);
         if (mBatteryStatus != null) {
@@ -206,6 +211,13 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             mEnableModLock.setChecked(checked);
         }
 
+        // Lockscreen frame
+        if (mDisableFrame != null) {
+            mDisableFrame.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_WIDGET_FRAME_ENABLED, 0) == 1);
+            mDisableFrame.setOnPreferenceChangeListener(this);
+        }
+
         updateAvailableModLockPreferences();
     }
 
@@ -274,6 +286,11 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             return true;
         } else if (preference == mBlurRadius) {
                Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_BLUR_RADIUS, (Integer)objValue);
+            return true;
+        } else if (preference == mDisableFrame) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_WIDGET_FRAME_ENABLED,
+                    (Boolean) objValue ? 1 : 0);
             return true;
         }
 

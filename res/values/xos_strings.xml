@@ -55,6 +55,10 @@
     <string name="show_enter_key_title">Show enter key</string>
     <string name="show_enter_key_summary">Force keyboard to show enter instead of emoticon key</string>
 
+    <!-- Keyguard widget frame -->
+    <string name="lockscreen_widget_frame_title">Disable widget frames</string>
+    <string name="lockscreen_widget_frame_summary">Disable widget background frames</string>
+
     <!-- Lockscreen battery ring -->
     <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
 
