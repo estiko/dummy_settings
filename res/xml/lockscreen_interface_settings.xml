@@ -95,10 +95,12 @@
         android:title="@string/misc_category"
         android:key="lockscreen_misc_category" >
 
+        <!-- Lockscreen Notification -->
         <Preference
-            android:fragment="com.android.settings.xoplax.LockscreenNotifications"
+            android:fragment="com.android.settings.xoplax.lsn.LockscreenNotifications"
             android:key="lockscreen_notifications"
-            android:summary="@string/lockscreen_notifications_summary" />
+            android:summary="@string/lockscreen_notifications_summary"
+            android:title="@string/Lockscreen_notifications_header" />
 
         <!-- Battery around unlock ring -->
         <CheckBoxPreference

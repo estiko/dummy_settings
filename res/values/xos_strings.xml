@@ -51,6 +51,9 @@
 
     <!-- Categories -->
     <string name="misc_category">Misc</string>
+    <string name="general">General</string>
+    <string name="layout">Layout</string>
+    <string name="privacy">Privacy</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -166,9 +169,6 @@
     <string name="blur_radius_summary">Set the blur radius for the blur effect</string>
 
     <!-- Lockscreen Notifications -->
-    <string name="general">General</string>
-    <string name="layout">Layout</string>
-    <string name="privacy">Privacy</string>
     <string name="Lockscreen_notifications_header">Lockscreen Notifications</string>
     <string name="lockscreen_notifications">Lockscreen notifications</string>
     <string name="lockscreen_notifications_summary">Show pending notifications on lockscreen</string>

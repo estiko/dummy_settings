@@ -3,7 +3,7 @@
 * Thanks to the original author!
 */
 
-package com.android.settings.xoplax;
+package com.android.settings.xoplax.lsn;
 
 import android.content.Context;
 import android.content.res.TypedArray;

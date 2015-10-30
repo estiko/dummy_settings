@@ -1,4 +1,4 @@
-package com.android.settings.xoplax;
+package com.android.settings.xoplax.lsn;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -56,6 +56,8 @@ public class LockscreenNotifications extends SettingsPreferenceFragment implemen
     private AppMultiSelectListPreference mExcludedAppsPref;
     private ColorPickerPreference mNotificationColor;
 
+    private Context mContext;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +65,7 @@ public class LockscreenNotifications extends SettingsPreferenceFragment implemen
         addPreferencesFromResource(R.xml.lockscreen_notifications);
         PreferenceScreen prefs = getPreferenceScreen();
         final ContentResolver cr = getActivity().getContentResolver();
+        mContext = getActivity();
 
         mLockscreenNotifications = (CheckBoxPreference) prefs.findPreference(KEY_LOCKSCREEN_NOTIFICATIONS);
         mLockscreenNotifications.setChecked(Settings.System.getInt(cr,
