@@ -1790,7 +1790,7 @@
 
         <!-- XoplaX OS activities Start -->
         <activity android:name="Settings$XOSSettingsActivity"
-                android:label="@string/interface_settings_title"
+                android:label="@string/xoplax_settings_title"
                 android:taskAffinity=""
                 android:excludeFromRecents="true">
             <intent-filter>
