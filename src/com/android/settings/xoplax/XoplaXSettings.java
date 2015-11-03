@@ -16,32 +16,37 @@
 
 package com.android.settings.xoplax;
 
+import android.content.ContentResolver;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.RemoteException;
+import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
+import android.provider.Settings;
+import android.util.Log;
+import android.view.WindowManagerGlobal;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 
-public class XoplaXSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
-
-    private static final String TAG = "XoplaXSettings";
+public class XoplaXSettings extends SettingsPreferenceFragment  implements
+        Preference.OnPreferenceChangeListener {
+    private static final String TAG = "XOSSettings";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         addPreferencesFromResource(R.xml.xoplax_settings);
+
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
         return false;
     }
-}
 
+}

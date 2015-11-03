@@ -451,6 +451,7 @@
     <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>
 
     <!-- XoplaX OS Settings -->
+    <string name="header_category_rom_settings">XOS Advanced Settings</string>
     <string name="xoplax_settings_title">XoplaX Inside</string>
 
     <!-- XoplaX OS Version -->
