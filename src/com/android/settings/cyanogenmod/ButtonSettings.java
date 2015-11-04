@@ -69,6 +69,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_NAVIGATION_BAR_LEFT = "navigation_bar_left";
     private static final String KEY_NAVIGATION_RECENTS_LONG_PRESS = "navigation_recents_long_press";
     // private static final String DISABLE_NAV_KEYS = "disable_nav_keys";
+    private static final String ENABLE_NAV_BAR = "enable_nav_bar";
     private static final String KEY_POWER_END_CALL = "power_end_call";
     private static final String KEY_HOME_ANSWER_CALL = "home_answer_call";
 
